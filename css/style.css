@@ -725,7 +725,7 @@ a {
 .testimonials .container .box img {
   position: absolute;
   right: -10px;
-  top: -50px;
+  top: -20px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -754,3 +754,109 @@ a {
   margin-bottom: 0;
 }
 /* End Testimonials Section */
+
+/* Start Team Section */
+.team {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+}
+
+.team .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.team .container .box {
+  position: relative;
+}
+
+.team .container .box::before,
+.team .container .box::after {
+  content: "";
+  background-color: #f3f3f3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+  transition: var(--main-transition);
+}
+
+.team .container .box::before {
+  z-index: -2;
+  width: calc(100% - 60px);
+}
+
+.team .container .box::after {
+  z-index: -1;
+  background-color: #e4e4e4;
+  width: 0;
+}
+
+.team .container .box:hover::after {
+  width: calc(100% - 60px);
+}
+
+.team .container .box .data {
+  display: flex;
+  padding-top: 60px;
+  align-items: center;
+}
+
+.team .container .box .data img {
+  width: calc(100% - 60px);
+  border-radius: 10px;
+  transition: var(--main-transition);
+}
+
+.team .container .box:hover img {
+  filter: grayscale(100%);
+}
+
+.team .container .box .data .social {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.team .container .box .data .social a {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team .container .box .data .social i {
+  color: #777;
+  transition: var(--main-transition);
+}
+
+.team .container .box .data .social a:hover i{
+  color: var(--main-color);
+}
+
+.team .container .box .info{
+  padding-left: 80px;
+}
+
+.team .container .box .info h3{
+  margin-top: 22px;
+  color: var(--main-color);
+  font-size: 22px;
+  transition: var(--main-transition);
+}
+
+.team .container .box:hover .info h3{
+  color: #777;
+}
+
+.team .container .box .info p{
+  margin: 10px 0 25px;
+}
+
+/* End Team Section */
