@@ -1246,3 +1246,53 @@ a {
   background-color: var(--main-color-alt);
 }
 /* End Latest Event */
+
+/* Start Pricing Section */
+.pricing{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: var(--section-background);
+}
+
+.pricing .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.pricing .box{
+  position: relative;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  transition: var(--main-transition);
+  background: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.pricing .box::before,
+.pricing .box::after{
+  content: "";
+  width: 0;
+  height: 50%;
+  background-color: #f6f6f6;
+  position: absolute;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+
+.pricing .box::before{
+  left: 0;
+  top: 0;
+}
+
+.pricing .box::after{
+  right: 0;
+  bottom: 0;
+} 
+
+.pricing .box:hover::before,
+.pricing .box:hover::after{
+  width: 100%;
+}
+/* End Pricing Section */
